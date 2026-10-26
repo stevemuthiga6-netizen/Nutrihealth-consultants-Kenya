@@ -1,12 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>D</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="NutriHealth Consultants Kenya - nutrition screening, consultations and wellness supplements." />
+  <title>NutriHealth Consultants Kenya | Your Health. Your Nutrition.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <h1>Welcome to My Website</h1>
-    <p>This is a simple paragraph.</p>  
+  <div class="topbar"> 
+    <div class="container topbar-inner">
+      <span>Nutrition guidance for a healthier you</span>
+        <a href="https://wa.me/254724165646" target="_blank" rel="noreferrer">WhatsApp us: 0724 165 646</a>
+    </div>
+  </div>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#home" aria-label="NutriHealth home">
+        <span class="brand-mark"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 42C10 34 7 21 13 12c4-6 12-7 17-2 5-5 13-4 16 3 4 10-5 22-22 29Z" fill="currentColor" opacity=".16"/><path d="M13 35C12 19 21 8 37 8 36 22 28 33 13 35Z" fill="currentColor"/><path d="M11 39 30 17" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/><path d="M11 39C8 28 8 18 15 12" stroke="#D94444" stroke-width="4" fill="none" stroke-linecap="round"/></svg></span>
+        <span class="brand-copy"><strong>Nutri<span>Health</span></strong><small>CONSULTANTS KENYA</small></span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+      <nav class="main-nav" id="mainNav">
+        <a href="#home" class="active">Home</a><a href="#services">Services</a><a href="#screening">Screening</a><a href="#shop">Shop</a><a href="#about">About</a><a href="#contact">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="icon-button" id="searchToggle" aria-label="Search products">⌕</button>
+        <button class="cart-button" id="cartOpen">Cart <span id="cartCount">0</span></button>
+        <a class="btn btn-small btn-green" href="#booking">Book a Service</a>
+      </div>
+      </div>
+    <div class="container search-row hidden" id="searchRow"><input id="productSearch" type="search" placeholder="Search supplements..." aria-label="Search supplements"><button class="btn btn-green" id="searchClear">Clear</button></div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-photo" role="img" aria-label="Nutrition professional with fresh healthy foods"></div>
+      <div class="container hero-content">
+        <div class="hero-copy">
+          <span class="eyebrow"><span class="eyebrow-dot"></span> PERSONALIZED NUTRITION & WELLNESS</span>
+          <h1>Your Health.<br>Your Nutrition.<br><span>Your Better Life.</span></h1>
+          <p>Make confident choices with personalized nutritional screening, expert guidance and carefully selected wellness supplements.</p>
+          <div class="hero-buttons"><a class="btn btn-green" href="#booking">Book a Consultation <span>↗</span></a><a class="btn btn-red" href="#shop">Shop Supplements <span>→</span></a></div>
+          <div class="trust-row"><div class="trust-item"><span class="trust-icon">✓</span><span><strong>Personal guidance</strong><small>Support for your goals</small></span></div><div class="trust-item"><span class="trust-icon">♡</span><span><strong>Wellness focused</strong><small>Care that fits your life</small></span></div></div>
+        </div>
+      </div>
+      <div class="hero-note"><span class="note-leaf">✳</span><span>Good nutrition<br><strong>better living</strong></span></div>
+    </section>
+
+    <section class="section section-tight" id="services">
+      <div class="container">
+        <div class="section-heading"><div><span class="eyebrow">HOW WE CAN HELP</span><h2>Care for your whole journey.</h2></div><a class="text-link" href="#booking">Explore our services <span>→</span></a></div>
+        <div class="service-grid">
+              <article class="service-card"><div class="service-icon">◉</div><h3>Nutritional Screening</h3><p>Explore your lifestyle and eating habits to identify areas where nutrition support may help.</p><a href="#screening">Start screening <span>→</span></a></article>
+          <article class="service-card"><div class="service-icon">✚</div><h3>Nutritional Consultancy</h3><p>Get practical, personalized guidance to help you build healthier everyday habits.</p><a href="#booking">Book consultation <span>→</span></a></article>
+          <article class="service-card"><div class="service-icon">♧</div><h3>Quality Supplements</h3><p>Browse our wellness range and learn about product ingredients and intended use.</p><a href="#shop">Shop products <span>→</span></a></article>
+          <article class="service-card"><div class="service-icon">▣</div><h3>Virtual Consultation</h3><p>Connect with a nutritional consultant online, wherever you are in Kenya.</p><a href="#booking">Book virtually <span>→</span></a></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section shop-section" id="shop">
+      <div class="container">
+        <div class="section-heading"><div><span class="eyebrow">OUR WELLNESS SHOP</span><h2>Small steps. Better habits.</h2><p class="section-subtitle">Explore our featured supplements and find information to help you choose.</p></div><a class="text-link" href="#shop">View all products <span>→</span></a></div>
+        <div class="shop-tools"><div class="filter-pills" id="categoryFilters"><button class="filter-pill selected" data-category="All">All products</button><button class="filter-pill" data-category="Vitamins">Vitamins</button><button class="filter-pill" data-category="Oils">Oils</button><button class="filter-pill" data-category="Protein">Protein</button><button class="filter-pill" data-category="Wellness">Wellness</button></div><span class="results-label" id="resultsLabel">6 featured products</span></div>
+        <div class="product-grid" id="productGrid">
+          <article class="product-card" data-category="Oils" data-name="Omega 3 Fish Oil"><div class="product-art art-orange"><span class="product-tag">Popular</span><div class="bottle"><span class="cap"></span><span class="label-bottle"><b>OMEGA 3</b><small>FISH OIL</small></span></div></div><div class="product-info"><span class="product-category">OILS & FATTY ACIDS</span><h3>Omega 3 Fish Oil</h3><p class="product-description">Supplement information and usage guidance.</p><div class="product-bottom"><strong>KSh 2,800</strong><span class="stars">★★★★★</span></div><button class="btn btn-green add-cart" data-product="Omega 3 Fish Oil" data-price="2800">Add to Cart</button></div></article>
+          <article class="product-card" data-category="Vitamins" data-name="Vitamin D3 1000 IU"><div class="product-art art-gold"><div class="bottle"><span class="cap"></span><span class="label-bottle"><b>VITAMIN D3</b><small>1000 IU</small></span></div></div><div class="product-info"><span class="product-category">VITAMINS</span><h3>Vitamin D3 1000 IU</h3><p class="product-description">View ingredients and product details.</p><div class="product-bottom"><strong>KSh 1,350</strong><span class="stars">★★★★★</span></div><button class="btn btn-green add-cart" data-product="Vitamin D3 1000 IU" data-price="1350">Add to Cart</button></div></article>
+          <article class="product-card" data-category="Protein" data-name="Whey Protein"><div class="product-art art-navy"><div class="tub"><span class="tub-label"><b>WHEY</b><small>PROTEIN</small></span></div></div><div class="product-info"><span class="product-category">SPORTS NUTRITION</span><h3>Whey Protein</h3><p class="product-description">Check serving and allergen information.</p><div class="product-bottom"><strong>KSh 3,500</strong><span class="stars">★★★★★</span></div><button class="btn btn-green add-cart" data-product="Whey Protein" data-price="3500">Add to Cart</button></div></article>
+          <article class="product-card" data-category="Wellness" data-name="Multivitamin for Adults"><div class="product-art art-rose"><div class="bottle"><span class="cap"></span><span class="label-bottle"><b>MULTI</b><small>VITAMIN</small></span></div></div><div class="product-info"><span class="product-category">DAILY WELLNESS</span><h3>Multivitamin for Adults</h3><p class="product-description">A handy overview of ingredients and use.</p><div class="product-bottom"><strong>KSh 2,100</strong><span class="stars">★★★★☆</span></div><button class="btn btn-green add-cart" data-product="Multivitamin for Adults" data-price="2100">Add to Cart</button></div></article>
+          <article class="product-card" data-category="Wellness" data-name="Collagen Peptides"><div class="product-art art-sage"><div class="tub"><span class="tub-label"><b>COLLAGEN</b><small>PEPTIDES</small></span></div></div><div class="product-info"><span class="product-category">WELLNESS</span><h3>Collagen Peptides</h3><p class="product-description">Review product details before ordering.</p><div class="product-bottom"><strong>KSh 2,650</strong><span class="stars">★★★★☆</span></div><button class="btn btn-green add-cart" data-product="Collagen Peptides" data-price="2650">Add to Cart</button></div></article>
+          <article class="product-card" data-category="Vitamins" data-name="Zinc Complex"><div class="product-art art-lilac"><div class="bottle"><span class="cap"></span><span class="label-bottle"><b>ZINC</b><small>COMPLEX</small></span></div></div><div class="product-info"><span class="product-category">MINERALS</span><h3>Zinc Complex</h3><p class="product-description">See ingredients, cautions and serving info.</p><div class="product-bottom"><strong>KSh 1,450</strong><span class="stars">★★★★☆</span></div><button class="btn btn-green add-cart" data-product="Zinc Complex" data-price="1450">Add to Cart</button></div></article>
+        </div>
+        <p class="demo-note">Demo catalogue: replace sample products, prices, images and descriptions with your verified stock details.</p>
+      </div>
+    </section>
+
+    <section class="screening-band" id="screening"><div class="container screening-inner"><div><span class="eyebrow eyebrow-light">YOUR FIRST STEP</span><h2>Get to know your nutrition.</h2><p>Answer a few questions about your habits and goals. A consultant can help you understand possible next steps.</p><a class="btn btn-white" href="#screeningForm">Start a quick screening <span>→</span></a></div><div class="screening-illustration"><div class="circle circle-one"></div><div class="circle circle-two"></div><div class="screening-sheet"><span class="sheet-check">✓</span><strong>Your wellness snapshot</strong><div class="fake-line"></div><div class="fake-line short"></div><div class="fake-checks"><i></i><i></i><i></i></div><small>Personalized support starts here</small></div></div></div></section>
+
+    <section class="section" id="screeningForm"><div class="container two-column"><div class="content-block"><span class="eyebrow">NUTRITIONAL SCREENING</span><h2>A few details.<br>A clearer starting point.</h2><p>Share a little about your lifestyle, eating habits and goals. This demo form gives you a simple summary and a way to request a follow-up.</p><ul class="check-list"><li>✓ Simple, step-by-step questions</li><li>✓ Built around your everyday habits</li><li>✓ Option to request a consultation</li></ul><p class="small-note">Screening is for general guidance and is not a medical diagnosis.</p></div>
+      <form class="panel screening-form" id="screeningFormElement"><h3>Tell us about yourself</h3><div class="form-grid"><label>Age range<select required name="age"><option value="">Select age range</option><option>Under 18</option><option>18–24</option><option>25–34</option><option>35–44</option><option>45–59</option><option>60+</option></select></label><label>Gender<select name="gender"><option value="">Prefer not to say</option><option>Female</option><option>Male</option><option>Other</option></select></label><label>Weight (kg)<input type="number" name="weight" min="1" max="400" placeholder="e.g. 68"></label><label>Activity level<select name="activity"><option value="">Choose level</option><option>Mostly seated</option><option>Lightly active</option><option>Moderately active</option><option>Very active</option></select></label><label class="full">Eating habits<textarea name="habits" rows="3" placeholder="Tell us about a typical day of eating..."></textarea></label><label class="full">Main nutrition goal<select name="goal"><option value="">Choose a goal</option><option>Improve everyday eating habits</option><option>Manage weight</option><option>Support sports and activity</option><option>Understand supplements</option><option>General wellness</option></select></label></div><button class="btn btn-green full-btn" type="submit">Create my summary <span>→</span></button><div class="form-result hidden" id="screeningResult" role="status"></div></form>
+    </div></section>
+
+    <section class="section booking-section" id="booking"><div class="container two-column booking-layout"><div class="content-block"><span class="eyebrow">PERSONALIZED SUPPORT</span><h2>Let’s find the right next step.</h2><p>Choose the type of support you prefer. Send a request and our team can follow up to confirm the appointment details.</p><div class="booking-benefit"><span>01</span><div><strong>Choose your consultation</strong><small>In-person in Kiambu Town or virtual from anywhere in Kenya.</small></div></div><div class="booking-benefit"><span>02</span><div><strong>Pick a convenient date</strong><small>Share your preferred time and contact details.</small></div></div><div class="booking-benefit"><span>03</span><div><strong>We’ll confirm with you</strong><small>This demo submits locally and does not send a real booking.</small></div></div></div>
+      <form class="panel booking-form" id="bookingForm"><h3>Request a consultation</h3><div class="form-grid"><label>Full name<input name="name" required placeholder="Your name"></label><label>Phone number<input name="phone" required type="tel" placeholder="+254..."></label><label>Service<select name="service" required><option value="">Choose a service</option><option>Nutritional screening</option><option>Nutritional consultancy</option><option>Supplement guidance</option></select></label><label>Consultation type<select name="type" required><option value="">Choose format</option><option>In-person · Kiambu Town</option><option>Virtual consultation</option></select></label><label>Preferred date<input name="date" type="date" required id="bookingDate"></label><label>Preferred time<select name="time" required><option value="">Choose time</option><option>9:00 AM</option><option>10:30 AM</option><option>12:00 PM</option><option>2:00 PM</option><option>3:30 PM</option></select></label><label class="full">Anything you’d like us to know? <textarea name="message" rows="3" placeholder="Optional details"></textarea></label></div><button class="btn btn-red full-btn" type="submit">Send booking request <span>→</span></button><div class="form-result hidden" id="bookingResult" role="status"></div></form>
+    </div></section>
+
+    <section class="section about-section" id="about"><div class="container about-grid"><div class="about-image"><div class="about-image-overlay"><span>WELLNESS, MADE PERSONAL</span><strong>Better nutrition.<br>Better everyday living.</strong></div></div><div class="content-block"><span class="eyebrow">ABOUT NUTRIHEALTH</span><h2>Practical guidance.<br>People-first care.</h2><p>NutriHealth Consultants Kenya helps people take informed steps toward better nutrition through screening, consultancy and supplement guidance.</p><p>We aim to make support approachable, thoughtful and available both in person and online.</p><div class="about-stat-row"><div><strong>01</strong><small>Personalized guidance</small></div><div><strong>02</strong><small>Physical & virtual care</small></div><div><strong>03</strong><small>Nationwide reach</small></div></div><a class="btn btn-green" href="#contact">Talk to our team <span>→</span></a></div></div></section>
+
+    <section class="testimonial-section"><div class="container testimonial-inner"><span class="quote-mark">“</span><div><span class="eyebrow">A BETTER WAY TO BUILD HABITS</span><h2>Small changes can add up.</h2><p>Our goal is to make nutrition information easier to understand, so you can make choices that suit your needs and lifestyle.</p></div><div class="testimonial-card"><div class="stars">★★★★★</div><p>“Clear information and a supportive approach make it easier to know what questions to ask about my nutrition.”</p><small>Sample testimonial for layout preview</small></div></div></section>
+
+    <section class="section contact-section" id="contact"><div class="container contact-grid"><div class="content-block"><span class="eyebrow">WE’RE HERE TO HELP</span><h2>Have a question?<br>Let’s talk.</h2><p>Ask us about services, product information, delivery or booking a consultation.</p><div class="contact-line"><span class="contact-symbol">☎</span><div><small>Call or WhatsApp</small><strong>0724 165 646</strong></div></div><div class="contact-line"><span class="contact-symbol">⌖</span><div><small>Physical office</small><strong>Kiambu Town, Kenya</strong></div></div><div class="contact-line"><span class="contact-symbol">◎</span><div><small>Service coverage</small><strong>In-person and virtual across Kenya</strong></div></div><a class="btn btn-green" href="https://wa.me/254724165646" target="_blank" rel="noreferrer">Chat on WhatsApp <span>↗</span></a></div>
+      <form class="panel contact-form" id="contactForm"><h3>Send us a message</h3><label>Your name<input name="name" required placeholder="Full name"></label><label>Email address<input name="email" type="email" placeholder="you@example.com"></label><label>What can we help with?<select name="topic"><option>General enquiry</option><option>Product question</option><option>Consultation booking</option><option>Order and delivery</option></select></label><label>Message<textarea name="message" rows="4" required placeholder="Write your message..."></textarea></label><button class="btn btn-green full-btn" type="submit">Send message <span>→</span></button><div class="form-result hidden" id="contactResult" role="status"></div></form></div></section>
+  </main>
+
+  <footer class="site-footer"><div class="container footer-main"><div class="footer-brand"><a class="brand brand-light" href="#home"><span class="brand-mark">✳</span><span class="brand-copy"><strong>Nutri<span>Health</span></strong><small>CONSULTANTS KENYA</small></span></a><p>Your partner for informed nutrition choices and everyday wellness.</p></div><div><h4>Explore</h4><a href="#services">Our services</a><a href="#screening">Nutritional screening</a><a href="#shop">Shop supplements</a><a href="#booking">Book consultation</a></div><div><h4>Contact</h4><a href="tel:+254724165646">0724 165 646</a><a href="https://wa.me/254724165646">WhatsApp support</a><span>Kiambu Town, Kenya</span></div><div class="newsletter"><h4>Wellness notes</h4><p>Occasional updates and nutrition tips.</p><form id="newsletterForm"><input type="email" placeholder="Your email address" required aria-label="Email for newsletter"><button type="submit" aria-label="Subscribe">→</button></form><div id="newsletterResult" class="newsletter-result" role="status"></div></div></div><div class="container footer-bottom"><span>© <span id="year"></span> NutriHealth Consultants Kenya</span><span>Made for healthier choices <span class="red-heart">♥</span></span><span class="disclaimer">Information on this demo site is not a substitute for professional medical advice.</span></div></footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping cart" aria-hidden="true"><div class="cart-header"><h2>Your cart <span id="drawerCount">(0)</span></h2><button id="cartClose" class="close-button" aria-label="Close cart">×</button></div><div id="cartItems" class="cart-items"><p class="empty-cart">Your cart is waiting for its first item.</p></div><div class="cart-footer"><div class="cart-total"><span>Subtotal</span><strong id="cartTotal">KSh 0</strong></div><p>Delivery fee will be confirmed before payment.</p><p>M-Pesa payment number: <strong>0724 165 646</strong></p><button class="btn btn-green full-btn" id="checkoutButton">Continue to checkout</button><small>Demo only: no payment is processed.</small></div></aside>
+  <div class="drawer-scrim" id="drawerScrim"></div>
+  <a class="whatsapp-float" href="https://wa.me/254724165646" target="_blank" rel="noopener noreferrer" aria-label="Chat with NutriHealth on WhatsApp" title="Chat with us on WhatsApp">
+    <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path fill="currentColor" d="M16 .8A15.1 15.1 0 0 0 3.1 23.8L1 31l7.4-1.9A15.1 15.1 0 1 0 16 .8Zm0 27.4c-2.2 0-4.3-.6-6.1-1.8l-.4-.2-4.4 1.1 1.2-4.3-.3-.4A12.3 12.3 0 1 1 16 28.2Zm6.8-9.2c-.4-.2-2.2-1.1-2.5-1.2-.3-.1-.6-.2-.8.2-.2.4-1 1.2-1.2 1.5-.2.2-.4.3-.8.1-.4-.2-1.6-.6-3-1.9-1.1-1-1.9-2.2-2.1-2.6-.2-.4 0-.6.2-.8l.6-.7c.2-.2.2-.4.4-.6.1-.2 0-.5 0-.7l-1.1-2.7c-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.7.1-1 .5-.4.4-1.3 1.3-1.3 3.1s1.3 3.5 1.5 3.7c.2.3 2.6 4 6.3 5.6.9.4 1.6.6 2.1.7.9.3 1.7.2 2.3.1.7-.1 2.2-.9 2.5-1.8.3-.9.3-1.6.2-1.8-.1-.1-.4-.3-.8-.5Z"/></svg>
+  </a>
+  <script src="script.js"></script>
 </body>
 </html>
