@@ -145,10 +145,28 @@ $("#bookingDate").min = new Date().toISOString().split("T")[0];
 $("#bookingForm").addEventListener("submit", e => {
   e.preventDefault();
   const data = new FormData(e.currentTarget);
-  const name = data.get("name");
-  const date = data.get("date");
-  const service = data.get("service");
-  showFormResult("#bookingResult", `Thank you, ${name}. Your ${service.toLowerCase()} request for ${date} has been prepared in this demo. No booking has been sent yet. Please contact us on 0724 165 646 to confirm.`);
+  const bookingMessage = [
+    "Hello NutriHealth Consultants Kenya, I would like to request a consultation.",
+    `Name: ${data.get("name")}`,
+    `Phone: ${data.get("phone")}`,
+    `Service: ${data.get("service")}`,
+    `Consultation type: ${data.get("type")}`,
+    `Preferred date: ${data.get("date")}`,
+    `Preferred time: ${data.get("time")}`,
+    `Additional details: ${data.get("message") || "None"}`
+  ].join("\n");
+  const whatsappUrl = `https://wa.me/254724165646?text=${encodeURIComponent(bookingMessage)}`;
+  const result = $("#bookingResult");
+  result.replaceChildren();
+  result.append("Your request is ready. Press Send in WhatsApp to submit it. ");
+  const whatsappLink = document.createElement("a");
+  whatsappLink.href = whatsappUrl;
+  whatsappLink.target = "_blank";
+  whatsappLink.rel = "noopener noreferrer";
+  whatsappLink.textContent = "Open WhatsApp booking request";
+  result.append(whatsappLink);
+  result.classList.remove("hidden");
+  window.open(whatsappUrl, "_blank", "noopener,noreferrer");
   e.currentTarget.reset();
 });
 $("#contactForm").addEventListener("submit", e => {

@@ -27,7 +27,7 @@ This is a responsive HTML/CSS/JavaScript starter based on the NutriHealth websit
 ## Important limitations
 This is a **front-end demo**, not a live online store yet:
 - The cart works in the current browser session, but it does not create orders in a database.
-- Screening, booking, contact and newsletter forms display demo responses only. They do not send data to NutriHealth.
+- The booking form prepares a WhatsApp message with the requested consultation details; you must press Send in WhatsApp, and NutriHealth must confirm the appointment. Screening, contact and newsletter forms still display demo responses only.
 - M-Pesa payments, user accounts, appointment reminders, order tracking and a consultant dashboard require a secure backend and service integrations.
 - Product names, prices, ratings and imagery are sample content. Verify all product information and replace sample details before publishing.
 - Do not make medical claims about supplements unless properly substantiated. Nutrition screening is not a diagnosis.
